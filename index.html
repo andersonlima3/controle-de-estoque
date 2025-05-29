@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controle de Estoque - Verbena Móveis</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="navbar-logo">
+        <img src="img/logo1.png" alt="Logo Verbena Móveis" class="logo" />
+      </div>
+      <ul class="navbar-menu">
+        <li><button class="tab-btn active" data-tab="produtos">Lista de Produtos</button></li>
+        <li><button class="tab-btn" data-tab="estatisticas">Estatísticas</button></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="main-container">
+    <!-- Lista de Produtos -->
+    <section id="produtos" class="tab-content active">
+      <h2 class="subtitulo">Controle de Estoque</h2>
+      <form id="addProductForm" class="form-produto">
+        <input type="text" id="productName" placeholder="Nome do produto" required />
+        <input type="text" id="productImage" placeholder="URL da imagem" required />
+        <input type="number" id="productQuantity" placeholder="Quantidade" required min="0" />
+        <input type="number" step="0.01" id="productPrice" placeholder="Preço (R$)" required min="0" />
+        <button type="submit">Adicionar Produto</button>
+      </form>
+      <div id="productsContainer" class="portfolio-grid"></div>
+    </section>
+
+    <!-- Estatísticas -->
+    <section id="estatisticas" class="tab-content">
+      <h2 class="subtitulo">Estatísticas (em desenvolvimento)</h2>
+      <p>Aqui você verá gráficos e informações do estoque futuramente.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Verbena Móveis | <a href="https://www.instagram.com/verbena_moveis/" target="_blank" rel="noopener noreferrer">Instagram</a></p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
